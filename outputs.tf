@@ -1,7 +1,3 @@
-output "cloudfrontkeyvaluestore_keys_exclusives_id" {
-  description = "Map of id values across all cloudfrontkeyvaluestore_keys_exclusives, keyed the same as var.cloudfrontkeyvaluestore_keys_exclusives"
-  value       = { for k, v in aws_cloudfrontkeyvaluestore_keys_exclusive.cloudfrontkeyvaluestore_keys_exclusives : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "cloudfrontkeyvaluestore_keys_exclusives_key_value_store_arn" {
   description = "Map of key_value_store_arn values across all cloudfrontkeyvaluestore_keys_exclusives, keyed the same as var.cloudfrontkeyvaluestore_keys_exclusives"
   value       = { for k, v in aws_cloudfrontkeyvaluestore_keys_exclusive.cloudfrontkeyvaluestore_keys_exclusives : k => v.key_value_store_arn if v.key_value_store_arn != null && length(v.key_value_store_arn) > 0 }
